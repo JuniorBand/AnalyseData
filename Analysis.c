@@ -31,14 +31,14 @@ void analyseData(List* data_strg, List* peak_strg, List* low_strg, List* plat_st
             printf("Mesmo elemento anterior (Platô): %.3f.\n", value);
             newPlat(ant_value, plat_strg);
             if (!is_empty(peak_strg)) //Se um pico já existir, printar
-                printf("Último pico local: %.3f \n", peak);
+                printf("Último pico local: %.3f. \n", peak);
         }
         
         //Função Crescente
         else if (value > (ant_value + EPSILON) && (ant_value > (ant2_value + EPSILON) || ant_value == (ant2_value))){
             printf("A função está crescente!\nNovo elemento: %.3f.\n", value);
             if (!is_empty(peak_strg)) //Se um pico já existir, printar
-                printf("Último pico local: %.3f \n", peak);
+                printf("Último pico local: %.3f. \n", peak);
         }
 
         //Função Decrescente
@@ -60,7 +60,7 @@ void analyseData(List* data_strg, List* peak_strg, List* low_strg, List* plat_st
             printf("Mínimo local (ponto de inversão)!\nNovo elemento: %.3f. \n", value);
             newLow(ant_value, low_strg);
             if (!is_empty(peak_strg)) //Se um pico já existir, printar
-                printf("Último pico local: %.3f. ", peak);
+                printf("Último pico local: %.3f. \n", peak);
         }
     }
 }
@@ -82,7 +82,7 @@ void showPeaks(List* peak_strg){
 void newLow(double newLowValue, List* low_strg){
     low = newLowValue;
     insert_element_tail(low_strg, low);
-    printf("Mínimo local: %.3f \n", newLowValue);
+    printf("Mínimo local: %.3f .\n", newLowValue);
 }
 
 //Mostra os mínimos

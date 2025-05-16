@@ -2,7 +2,7 @@
 #include "Analysis.h"
 #include "List.h"
 
-void iniateLoop(){
+void initiateLoop(){
 	double value;
 	int term = 1;
 
@@ -58,12 +58,12 @@ void iniateLoop(){
 	printf("\n");
 
 	if (resp1 == 1)
-		iniateLoop(); //reinicia a análise de dados
+		initiateLoop(); //reinicia a análise de dados
 }
 
 int main () {
 
-	iniateLoop(); //inicia a análise de dados
+	initiateLoop(); //inicia a análise de dados
 
 	return 0;
 
