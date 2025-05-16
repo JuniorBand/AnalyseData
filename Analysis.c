@@ -17,7 +17,6 @@ void analyseData(List* data_strg, List* peak_strg, List* low_strg, List* plat_st
     
     if(counter == 0){
         printf("Primeiro Dado: %.3f\n", init);
-        //peak = init;
     } else if (counter == 1){
         double sec = get_element_at(data_strg, 1);
         printf("Segundo Dado: %.3f\n", sec);
@@ -31,30 +30,37 @@ void analyseData(List* data_strg, List* peak_strg, List* low_strg, List* plat_st
         if(value == ant_value){
             printf("Mesmo elemento anterior (Platô): %.3f.\n", value);
             newPlat(ant_value, plat_strg);
+            if (!is_empty(peak_strg)) //Se um pico já existir, printar
+                printf("Último pico local: %.3f \n", peak);
         }
         
         //Função Crescente
         else if (value > (ant_value + EPSILON) && (ant_value > (ant2_value + EPSILON) || ant_value == (ant2_value))){
             printf("A função está crescente!\nNovo elemento: %.3f.\n", value);
-           
+            if (!is_empty(peak_strg)) //Se um pico já existir, printar
+                printf("Último pico local: %.3f \n", peak);
         }
 
         //Função Decrescente
         else if ((value < (ant_value + EPSILON) && (ant_value < (ant2_value + EPSILON)) || ant_value == (ant2_value))){
-            printf("Ação Crítica! \nNovo elemento: %.3f. Pico local: %.3f \n", value, peak);
+            printf("Ação Crítica!!! A função está decrescente. \nNovo elemento: %.3f. \n", value);
+            if (!is_empty(peak_strg)) //Se um pico já existir, printar
+                printf("Pico local: %.3f \n", peak);
             //Ação crítica é disparada sempre que o código encontra valores menores após um pico
         }
 
         //Novo Pico Local
         else if(value < (ant_value + EPSILON) && ant_value > (ant2_value + EPSILON)){ 
-            printf("Novo elemento: %.3f. ", value);
+            printf("Novo elemento: %.3f. \n", value);
             newPeak(ant_value, peak_strg);
         }
 
         //Mínimo Local
         else if(value > (ant_value + EPSILON) && ant_value < (ant2_value + EPSILON)){
-            printf("Mínimo local (ponto de inversão)!\nNovo elemento: %.3f. Último pico local: %.3f. ", value, peak);
+            printf("Mínimo local (ponto de inversão)!\nNovo elemento: %.3f. \n", value);
             newLow(ant_value, low_strg);
+            if (!is_empty(peak_strg)) //Se um pico já existir, printar
+                printf("Último pico local: %.3f. ", peak);
         }
     }
 }
