@@ -1,0 +1,55 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    
+    {
+      "name": "Debug programa",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "programa.exe",
+      "args": [],
+      "stopAtEntry": true,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": true,
+      "MIMode": "gdb",
+      "miDebuggerPath": "C:\\msys64\\ucrt64\\bin\\gdb.exe",
+      "preLaunchTask": "Compilar C",
+      "setupCommands": [
+        {
+          "description": "Habilitar pretty-printing para gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
+
+
+// {
+//     "version": "0.2.0",
+//     "configurations": [
+//       {
+//         "name": "Debug programa",
+//         "type": "cppdbg",
+//         "request": "launch",
+//         "program": "${fileDirname}/programa.exe",
+//         "args": [],
+//         "stopAtEntry": false,
+//         "cwd": "${fileDirname}",
+//         "environment": [],
+//         "externalConsole": false,
+//         "MIMode": "gdb",
+//         "preLaunchTask": "C/C++: gcc.exe build active file", // tem que ser o mesmo nome da task no tasks.json
+//         "setupCommands": [
+//           {
+//             "description": "Habilitar pretty-printing para gdb",
+//             "text": "-enable-pretty-printing",
+//             "ignoreFailures": true
+//           }
+//         ]
+//       }
+//     ]
+//   }
+  
