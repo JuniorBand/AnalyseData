@@ -64,7 +64,9 @@ void iniateLoop(){
 int main () {
 
 	iniateLoop(); //inicia a análise de dados
+
 	return 0;
+
 }
 
 
