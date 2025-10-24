@@ -11,3 +11,9 @@ Analisa os dados da função.
 
 #List:
 Cria e altera uma lista dinâmica em C.
+
+To run it online, use the [GDB Online Compiler](https://onlinegdb.com/JW3FrBRUC).
+
+To run the compiled version from the same directory, use the following command:
+
+```./program```

@@ -1,6 +1,6 @@
 ./.vscode/
 ./output/
 ./.idea/
-*.exe
+#*.exe
 ./cmake-build-debug/
 *.json

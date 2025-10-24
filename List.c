@@ -9,6 +9,13 @@ struct element { //Cria um nó
     struct element *prox;
 };
 
+//OR for shortness:
+// typedef struct { //Cria um nó
+//     double data;
+//     struct element *prox;
+// } Elem;
+
+
 List* create_list(){ //cria o primeiro ponteiro pro primeiro nó = NULL
     List* li = (List*) malloc(sizeof(List));
     if (li != NULL){
