@@ -12,8 +12,13 @@ Analisa os dados da função.
 #List:
 Cria e altera uma lista dinâmica em C.
 
-To run it online, use the [GDB Online Compiler](https://onlinegdb.com/JW3FrBRUC).
+Para rodar online, use o [GDB Online Compiler](https://onlinegdb.com/JW3FrBRUC).
 
-To run the compiled version from the same directory, use the following command:
+Pra rodar a versão compilada (Windows x64) a partir do mesmo diretório, use o seguinte comando:
 
 ```./program```
+
+Dê uma olhada em como fica na prática:
+
+![alt text](img/img1.png)
+![alt text](img/img2.png)

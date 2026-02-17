@@ -5,8 +5,6 @@
 #include <math.h>
 #define EPSILON 0.00001 //evita erros na comparação de doubles
 
-
-
 double peak;
 double low;
 double plat;

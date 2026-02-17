@@ -10,7 +10,7 @@ void initiateLoop(){
 	List* peak_strg = create_list();
 	List* low_strg = create_list();
 	List* plat_strg = create_list();
-	int counter;
+	int counter = 0;
 
 	//Se tiver definido quantos dados quer inserir, use isso:
 	// int count
